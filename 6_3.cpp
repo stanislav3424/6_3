@@ -101,7 +101,7 @@ int main()
 {
     std::vector<FigureBase*> figuresArr;
 
-    addFigure(figuresArr, "Figure", new SideAndAngle[0]{});
+    addFigure(figuresArr, "Figure", nullptr );
     addFigure(figuresArr, "Triangle", new SideAndAngle[3]{{10, 50}, {20, 60}, {30, 70}});
     addFigure(figuresArr, "Right triangle", new SideAndAngle[3]{{10, 50}, {20, 60}, {30, 90}});
     addFigure(figuresArr, "Right triangle", new SideAndAngle[3]{{10, 50}, {20, 40}, {30, 90}});
