@@ -1,5 +1,6 @@
 #pragma once
 #include "FigureBase.h"
+#include "CustomException.h"
 
 class QuadrangleFigureBase : public FigureBase
 {
@@ -9,6 +10,7 @@ class QuadrangleFigureBase : public FigureBase
         : FigureBase(nameFigure, sideAndAngle)
     {
         setNumberOfSides(4);
+        
     }
     bool getCorrect() override;
 };

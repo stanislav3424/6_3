@@ -1,5 +1,6 @@
 #pragma once
 #include "SideAndAngle.h"
+#include "CustomException.h"
 #include <string>
 
 class FigureBase
@@ -19,7 +20,7 @@ class FigureBase
 
     virtual ~FigureBase()
     {
-        //delete[] sideAndAngle;
+        delete[] sideAndAngle;
     }
 
     int getNumberOfSide();

@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 
+#include "CustomException.h"
+
 #include "SideAndAngle.h"
 #include "FigureBase.h"
 #include "QuadrangleFigureBase.h"
@@ -13,7 +15,7 @@
 #include "Rectangle.h"
 #include "Square.h"
 
-void print_info(const std::vector<FigureBase*>& figuresArr)
+void print_infoArr(const std::vector<FigureBase*>& figuresArr)
 {
     for (auto& figure : figuresArr)
     {
@@ -49,6 +51,22 @@ void print_info(const std::vector<FigureBase*>& figuresArr)
         std::cout << std::endl;
         std::cout << std::endl;
     }
+}
+
+void print_info(const int& size, const std::string& nameFigure, SideAndAngle* sideAndAngle)
+{
+    std::cout << nameFigure << " (";
+    std::cout << "sides ";
+    for (int indexSide{}; indexSide < size; ++indexSide)
+    {
+        std::cout << sideAndAngle[indexSide].side_length << ", ";
+    }
+    std::cout << " angles ";
+    for (int indexAngle{}; indexAngle < size; ++indexAngle)
+    {
+        std::cout << sideAndAngle[indexAngle].angle_deg << ", ";
+    }
+    std::cout << ") ";
 }
 
 FigureBase* createFigure(const std::string& nameFigure, SideAndAngle* sideAndAngle)
@@ -97,11 +115,30 @@ void addFigure(std::vector<FigureBase*>& figuresArr, const std::string& nameFigu
     figuresArr.push_back(createFigure(nameFigure, sideAndAngle));
 }
 
+void addFigureException(std::vector<FigureBase*>& figuresArr,const int& size , const std::string& nameFigure, SideAndAngle* sideAndAngle)
+{
+    try
+    {
+        print_info(size, nameFigure, sideAndAngle);
+        figuresArr.push_back(createFigure(nameFigure, sideAndAngle));
+        std::cout << "created" << std::endl;
+    }
+    catch (const CustomException& test)
+    {
+        std::cout << "not created" << std::endl;
+        std::cout << "Error creating figure. Reason: ";
+        std::cout << test.what() << std::endl;
+        figuresArr.pop_back();
+    }
+    std::cout << std::endl;
+    std::cout << std::endl;
+}
+
 int main()
 {
     std::vector<FigureBase*> figuresArr;
 
-    addFigure(figuresArr, "Figure", new SideAndAngle[0]{});
+    /*addFigure(figuresArr, "Figure", new SideAndAngle[0]{});
     addFigure(figuresArr, "Triangle", new SideAndAngle[3]{{10, 50}, {20, 60}, {30, 70}});
     addFigure(figuresArr, "Right triangle", new SideAndAngle[3]{{10, 50}, {20, 60}, {30, 90}});
     addFigure(figuresArr, "Right triangle", new SideAndAngle[3]{{10, 50}, {20, 40}, {30, 90}});
@@ -111,9 +148,24 @@ int main()
     addFigure(figuresArr, "Rectangle", new SideAndAngle[4]{{10, 90}, {20, 90}, {10, 90}, {20, 90}});
     addFigure(figuresArr, "Square", new SideAndAngle[4]{{20, 90}, {20, 90}, {20, 90}, {20, 90}});
     addFigure(figuresArr, "Parallelogram", new SideAndAngle[4]{{20, 30}, {30, 40}, {20, 30}, {30, 40}});
-    addFigure(figuresArr, "Rhombus", new SideAndAngle[4]{{30, 30}, {30, 40}, {30, 30}, {30, 40}});
+    addFigure(figuresArr, "Rhombus", new SideAndAngle[4]{{30, 30}, {30, 40}, {30, 30}, {30, 40}});*/
 
-    print_info(figuresArr);
+    //print_infoArr(figuresArr);
+
+    addFigureException(figuresArr, 0, "Figure", new SideAndAngle[0]{});
+    addFigureException(figuresArr, 3, "Triangle", new SideAndAngle[3]{{10, 50}, {20, 60}, {30, 70}});
+    addFigureException(figuresArr, 3, "Right triangle", new SideAndAngle[3]{{10, 50}, {20, 60}, {30, 90}});
+    addFigureException(figuresArr, 3, "Right triangle", new SideAndAngle[3]{{10, 50}, {20, 40}, {30, 90}});
+    addFigureException(figuresArr, 3, "Isosceles triangle", new SideAndAngle[3]{{10, 50}, {20, 60}, {10, 50}});
+    addFigureException(figuresArr, 3, "Equilateral triangle", new SideAndAngle[3]{{30, 60}, {30, 60}, {30, 60}});
+    addFigureException(figuresArr, 4, "Quadrilateral", new SideAndAngle[4]{{10, 50}, {20, 60}, {30, 70}, {40, 80}});
+    addFigureException(figuresArr, 4, "Rectangle", new SideAndAngle[4]{{10, 90}, {20, 90}, {10, 90}, {20, 90}});
+    addFigureException(figuresArr, 4, "Square", new SideAndAngle[4]{{20, 90}, {20, 90}, {20, 90}, {20, 90}});
+    addFigureException(figuresArr, 4, "Parallelogram", new SideAndAngle[4]{{20, 30}, {30, 40}, {20, 30}, {30, 40}});
+    addFigureException(figuresArr, 4, "Rhombus", new SideAndAngle[4]{{30, 30}, {30, 40}, {30, 30}, {30, 40}});
+
+
+
 
     for (auto figure : figuresArr)
     {

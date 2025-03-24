@@ -86,6 +86,9 @@
     <ClInclude Include="Rhombus.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="CustomException.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="6_3.rc">
