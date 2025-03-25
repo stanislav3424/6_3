@@ -128,7 +128,11 @@ void addFigureException(std::vector<FigureBase*>& figuresArr,const int& size , c
         std::cout << "not created" << std::endl;
         std::cout << "Error creating figure. Reason: ";
         std::cout << test.what() << std::endl;
-        figuresArr.pop_back();
+        if (!figuresArr.empty())
+        {
+            delete figuresArr.back();
+            figuresArr.pop_back();
+        }
     }
     std::cout << std::endl;
     std::cout << std::endl;
@@ -161,11 +165,9 @@ int main()
     addFigureException(figuresArr, 4, "Quadrilateral", new SideAndAngle[4]{{10, 50}, {20, 60}, {30, 70}, {40, 80}});
     addFigureException(figuresArr, 4, "Rectangle", new SideAndAngle[4]{{10, 90}, {20, 90}, {10, 90}, {20, 90}});
     addFigureException(figuresArr, 4, "Square", new SideAndAngle[4]{{20, 90}, {20, 90}, {20, 90}, {20, 90}});
+    addFigureException(figuresArr, 4, "Square", new SideAndAngle[4]{{20, 89}, {20, 89}, {20, 91}, {20, 91}});
     addFigureException(figuresArr, 4, "Parallelogram", new SideAndAngle[4]{{20, 30}, {30, 40}, {20, 30}, {30, 40}});
     addFigureException(figuresArr, 4, "Rhombus", new SideAndAngle[4]{{30, 30}, {30, 40}, {30, 30}, {30, 40}});
-
-
-
 
     for (auto figure : figuresArr)
     {

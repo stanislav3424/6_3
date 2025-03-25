@@ -10,7 +10,7 @@ class TriangleFigureBase : public FigureBase
         : FigureBase(nameFigure, sideAndAngle)
     {
         setNumberOfSides(3);
-        if (getCorrect())
+        if (!getCorrect())
         {
             throw CustomException("The angles are not equal to 180");
         }

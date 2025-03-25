@@ -21,7 +21,7 @@ std::string FigureBase::getName()
 }
 bool FigureBase::getCorrect()
 {
-    return true;
+    return false;
 }
 void FigureBase::setNumberOfSides(int setNumberOfSides)
 {
