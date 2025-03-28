@@ -10,7 +10,7 @@ class QuadrangleFigureBase : public FigureBase
         : FigureBase(nameFigure, sideAndAngle)
     {
         setNumberOfSides(4);
-        if (!getCorrect())
+        if (!QuadrangleFigureBase::getCorrect())
         {
             throw CustomException("The angles are not equal to 360");
         }
