@@ -1,7 +1,9 @@
 #pragma once
+
+#include "DllFigure.h"
 #include "FigureBase.h"
 
-class TriangleFigureBase : public FigureBase
+class DLLFIGURE_API TriangleFigureBase : public FigureBase
 {
   private:
   public:

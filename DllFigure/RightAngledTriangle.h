@@ -1,6 +1,9 @@
 #pragma once
+
+#include "DllFigure.h"
 #include "TriangleFigureBase.h"
-class RightAngledTriangle : public TriangleFigureBase
+
+class DLLFIGURE_API RightAngledTriangle : public TriangleFigureBase
 {
   public:
     RightAngledTriangle(std::string nameFigure, SideAndAngle* sideAndAngle)

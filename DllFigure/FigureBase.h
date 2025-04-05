@@ -1,8 +1,9 @@
 #pragma once
 #include "SideAndAngle.h"
+#include "DllFigure.h"
 #include <string>
 
-class FigureBase
+class DLLFIGURE_API FigureBase
 {
   protected:
     std::string nameFigure{"figure"};

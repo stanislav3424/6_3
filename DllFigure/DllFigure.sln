@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35806.99
+VisualStudioVersion = 17.13.35806.99 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "6_3", "6_3.vcxproj", "{59367321-1B77-47CA-9B3C-74EBD8215681}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DllFigure", "DllFigure\DllFigure.vcxproj", "{C9F6586E-F632-4D84-97B3-323F447CCA26}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DllFigure", "DllFigure.vcxproj", "{C9F6586E-F632-4D84-97B3-323F447CCA26}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,14 +13,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{59367321-1B77-47CA-9B3C-74EBD8215681}.Debug|x64.ActiveCfg = Debug|x64
-		{59367321-1B77-47CA-9B3C-74EBD8215681}.Debug|x64.Build.0 = Debug|x64
-		{59367321-1B77-47CA-9B3C-74EBD8215681}.Debug|x86.ActiveCfg = Debug|Win32
-		{59367321-1B77-47CA-9B3C-74EBD8215681}.Debug|x86.Build.0 = Debug|Win32
-		{59367321-1B77-47CA-9B3C-74EBD8215681}.Release|x64.ActiveCfg = Release|x64
-		{59367321-1B77-47CA-9B3C-74EBD8215681}.Release|x64.Build.0 = Release|x64
-		{59367321-1B77-47CA-9B3C-74EBD8215681}.Release|x86.ActiveCfg = Release|Win32
-		{59367321-1B77-47CA-9B3C-74EBD8215681}.Release|x86.Build.0 = Release|Win32
 		{C9F6586E-F632-4D84-97B3-323F447CCA26}.Debug|x64.ActiveCfg = Debug|x64
 		{C9F6586E-F632-4D84-97B3-323F447CCA26}.Debug|x64.Build.0 = Debug|x64
 		{C9F6586E-F632-4D84-97B3-323F447CCA26}.Debug|x86.ActiveCfg = Debug|Win32
@@ -36,6 +26,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {EBCE83B9-E919-4311-80ED-4E654815FCFC}
+		SolutionGuid = {9982F4AF-B375-44D1-B0C5-3F173BD4E655}
 	EndGlobalSection
 EndGlobal

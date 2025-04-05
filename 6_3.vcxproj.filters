@@ -18,72 +18,9 @@
     <ClCompile Include="6_3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="FigureBase.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TriangleFigureBase.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="QuadrangleFigureBase.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="RightAngledTriangle.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="IsoscelesTriangle.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="EquilateralTriangle.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Rectangle.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Square.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Parallelogram.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Rhombus.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="FigureBase.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TriangleFigureBase.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="QuadrangleFigureBase.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SideAndAngle.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="RightAngledTriangle.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="IsoscelesTriangle.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="EquilateralTriangle.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Rectangle.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Square.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Parallelogram.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Rhombus.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,6 +1,9 @@
 #pragma once
+
+#include "DllFigure.h"
 #include "QuadrangleFigureBase.h"
-class Rhombus : public QuadrangleFigureBase
+
+class DLLFIGURE_API Rhombus : public QuadrangleFigureBase
 {
   public:
     Rhombus(std::string nameFigure, SideAndAngle* sideAndAngle) : QuadrangleFigureBase(nameFigure, sideAndAngle)
